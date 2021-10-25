@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let yourBirthYear = prompt(" Nhập năm sinh của bạn: ");
+    function yourAge(yourBirthYear){
+        let today = new Date();
+        let year = today.getFullYear();
+        return year - yourBirthYear;
+    }
+    document.write("Tuổi của bạn là: " + yourAge(yourBirthYear));
+
+</script>
+</body>
+</html>

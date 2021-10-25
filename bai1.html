@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <label>Enter a number: <input id="number" type="number"></label> <button  onclick="show()"> Show </button>
+ <p id="result"></p>
+<script>
+    function isPrime(a) {
+        if(a<2){
+            return false;
+        }else {
+            for (let j = 2; j <= Math.sqrt(a); j++) {
+                if (a % j === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function show() {
+        let number = +document.getElementById("number").value;
+        let count = 0;
+        let result = [];
+        for (let N = 2; count <= number; N++) {
+            if (isPrime(N)) {
+                result.push(N)
+                count++;
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

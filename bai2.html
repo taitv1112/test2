@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cho trước một mảng các phần tử số nguyên, viết hàm tính tổng các số lẻ trong mảng đó. </title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt(" Nhập số phần tử mảng: "));
+    let intNumber = new Array(numbers);
+    for(let i=0;i<intNumber.length;i++){
+        intNumber[i] = Math.round(Math.random()*100+1);// ran
+    }
+    document.write("Phần tử trong mảng: "+intNumber);
+    function sumOdd(arr){
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i]%2 !==0){
+                sum += arr[i]
+            }
+        }
+        return sum;
+    }
+    document.write(sumOdd(intNumber));
+
+</script>
+</body>
+</html>
